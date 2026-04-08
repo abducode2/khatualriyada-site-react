@@ -183,19 +183,29 @@ const Footer = () => {
             </h4>
             <ul className="footer-links">
               <li>
-                <a href="#">التطوير العقاري</a>
+                <a href="https://www.linkedin.com/in/namir-development-and-contracting-company-5b3a1b2c/">
+                  التطوير العقاري
+                </a>
               </li>
               <li>
-                <a href="#">المقاولات العامة</a>
+                <a href="https://www.linkedin.com/in/namir-development-and-contracting-company-5b3a1b2c/">
+                  المقاولات العامة
+                </a>
               </li>
               <li>
-                <a href="#">التصميم الهندسي</a>
+                <a href="https://www.linkedin.com/in/namir-development-and-contracting-company-5b3a1b2c/">
+                  التصميم الهندسي
+                </a>
               </li>
               <li>
-                <a href="#">إدارة المشاريع</a>
+                <a href="https://www.linkedin.com/in/namir-development-and-contracting-company-5b3a1b2c/">
+                  إدارة المشاريع
+                </a>
               </li>
               <li>
-                <a href="#">الاستشارات العقارية</a>
+                <a href="https://www.linkedin.com/in/namir-development-and-contracting-company-5b3a1b2c/">
+                  الاستشارات العقارية
+                </a>
               </li>
             </ul>
           </div>
@@ -264,11 +274,17 @@ const Footer = () => {
             </p>
           </div>
           <div className="legal-links">
-            <a href="#">سياسة الخصوصية</a>
+            <a href="https://www.linkedin.com/in/namir-development-and-contracting-company-5b3a1b2c/">
+              سياسة الخصوصية
+            </a>
             <span className="separator">|</span>
-            <a href="#">شروط الاستخدام</a>
+            <a href="https://www.linkedin.com/in/namir-development-and-contracting-company-5b3a1b2c/">
+              شروط الاستخدام
+            </a>
             <span className="separator">|</span>
-            <a href="#">خريطة الموقع</a>
+            <a href="https://www.linkedin.com/in/namir-development-and-contracting-company-5b3a1b2c/">
+              خريطة الموقع
+            </a>
           </div>
         </div>
 

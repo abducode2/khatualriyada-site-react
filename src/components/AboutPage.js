@@ -257,13 +257,13 @@ const AboutPage = () => {
                 <span className="team-position">{member.position}</span>
                 <p>{member.desc}</p>
                 <div className="team-social">
-                  <a href="#">
+                  <a href="https://www.linkedin.com/in/namir-development-and-contracting-company-5b3a1b2c/">
                     <i className="fab fa-linkedin-in"></i>
                   </a>
-                  <a href="#">
+                  <a href="https://www.linkedin.com/in/namir-development-and-contracting-company-5b3a1b2c/">
                     <i className="fab fa-twitter"></i>
                   </a>
-                  <a href="#">
+                  <a href="https://www.linkedin.com/in/namir-development-and-contracting-company-5b3a1b2c/">
                     <i className="fas fa-envelope"></i>
                   </a>
                 </div>
