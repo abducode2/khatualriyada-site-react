@@ -1,9 +1,10 @@
 {
-  "name": "namir-site-react",
+  "name": "khatualriyada-site-react",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
     "aos": "^2.3.4",
+    "gh-pages": "^6.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^7.14.0",
@@ -14,8 +15,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
+  "homepage": "https://abducode2.github.io/khatualriyada-site-react",
   "eslintConfig": {
     "extends": [
       "react-app"
