@@ -1,13 +1,80 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
+:root {
+  /* Fluid typography tokens using clamp() */
+  /* Base size: 16px. Scales between 1rem (320px) and 1.15rem (1440px) */
+  --font-fluid-base: clamp(1rem, 0.95rem + 0.25vw, 1.15rem);
+  
+  /* Heading sizes */
+  --h1-fluid: clamp(2.5rem, 1.8rem + 3.5vw, 4.2rem);
+  --h2-fluid: clamp(2rem, 1.5rem + 2.5vw, 3.2rem);
+  --h3-fluid: clamp(1.5rem, 1.2rem + 1.5vw, 2.2rem);
+  --body-fluid: clamp(1rem, 0.95rem + 0.25vw, 1.1rem);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px; /* Base for rem */
+}
+
+body {
+  font-family: 'Cairo', 'Inter', sans-serif;
+  overflow-x: hidden;
+  font-size: var(--body-fluid);
+  line-height: 1.6;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gray-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 5%; /* Fluid padding */
+  width: 100%;
+}
+
+@media (min-width: 1440px) {
+  .container {
+    padding: 0 32px;
+  }
+}
+
+/* Common animations */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

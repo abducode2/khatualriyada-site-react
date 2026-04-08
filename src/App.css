@@ -1,38 +1,188 @@
-.App {
+/* Light mode variables (default) - Updated with Namer logo colors */
+:root {
+  /* Primary color from logo: Golden #9C8446 */
+  --primary: #9C8446;
+  --primary-dark: #7A6838;
+  --primary-light: #B59E60;
+
+  /* Secondary color from logo: Dark Green #254033 */
+  --secondary: #254033;
+  --secondary-dark: #1A2D24;
+  --secondary-light: #3A5C4F;
+
+  /* Gray from logo: #666666 */
+  --gray-base: #666666;
+
+  --white: #FFFFFF;
+  --gray-text: #666666;
+  --gray-light: #F5F4F0;
+  --gray-border: #E8E5DC;
+  --bg-body: #FFFFFF;
+  --card-bg: #FFFFFF;
+  --footer-bg: #1A2D24;
+  --footer-text: #CFD8D4;
+
+  --shadow-sm: 0 12px 30px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 25px 40px -12px rgba(0, 0, 0, 0.15);
+  --shadow-gold: 0 20px 35px -8px rgba(156, 132, 70, 0.25);
+  --gradient-gold: linear-gradient(135deg, #9C8446 0%, #7A6838 100%);
+  --gradient-secondary: linear-gradient(135deg, #254033 0%, #1A2D24 100%);
+  --transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  --navbar-bg: rgba(255, 255, 255, 0.96);
+  --border-light: rgba(156, 132, 70, 0.2);
+  --about-wrapper-bg: #F5F4F0;
+  --contact-bg: linear-gradient(145deg, #ffffff 0%, #FDF9F0 100%);
+  --stat-block-bg: #FFFFFF;
+}
+
+/* Dark mode - Using same brand colors with darker backgrounds */
+body.dark-mode {
+  --primary: #B59E60;
+  --primary-dark: #9C8446;
+  --primary-light: #C9B47A;
+  --secondary: #3A5C4F;
+  --secondary-dark: #254033;
+
+  --white: #1A1E2A;
+  --gray-text: #B0BEC5;
+  --gray-light: #1E2432;
+  --gray-border: #2D3345;
+  --bg-body: #12161F;
+  --card-bg: #1E2432;
+  --footer-bg: #0A0E16;
+  --footer-text: #A0A8B8;
+
+  --shadow-sm: 0 12px 30px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 25px 40px -12px rgba(0, 0, 0, 0.4);
+  --shadow-gold: 0 20px 35px -8px rgba(156, 132, 70, 0.2);
+  --navbar-bg: rgba(18, 22, 31, 0.96);
+  --border-light: rgba(156, 132, 70, 0.3);
+  --about-wrapper-bg: #1A202C;
+  --contact-bg: linear-gradient(145deg, #1A202C 0%, #161C28 100%);
+  --stat-block-bg: #232A3A;
+}
+
+body {
+  background-color: var(--bg-body);
+  color: #1F2E2A;
+  transition: background-color 0.3s ease, color 0.2s ease;
+}
+
+body.dark-mode {
+  color: #E0E6ED;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* Section common styles */
+section {
+  padding: clamp(60px, 8vw, 120px) 0;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 0;
+  }
+}
+
+.section-title {
+  font-size: var(--h2-fluid);
+  font-weight: 800;
+  color: var(--secondary-dark);
+  margin-bottom: 18px;
+  position: relative;
+  display: inline-block;
+}
+
+body.dark-mode .section-title {
+  color: var(--primary);
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  right: 0;
+  width: 70px;
+  height: 4px;
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+.section-subtitle {
+  color: var(--gray-text);
+  margin-bottom: clamp(30px, 5vw, 60px);
+  font-size: clamp(1rem, 0.95rem + 0.5vw, 1.25rem);
+  max-width: 680px;
+}
+
+.text-center {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex-center {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--gradient-gold);
   color: white;
+  font-weight: 800;
+  padding: 14px 34px;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 1rem;
+  font-family: 'Tajawal', sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 6px 14px rgba(156, 132, 70, 0.3);
 }
 
-.App-link {
-  color: #61dafb;
+.btn-primary:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 30px rgba(156, 132, 70, 0.4);
+  background: linear-gradient(135deg, #B59E60, #9C8446);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-outline-gold {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  font-weight: 700;
+  padding: 12px 32px;
+  border-radius: 50px;
+  transition: var(--transition);
+  font-family: 'Tajawal', sans-serif;
+  cursor: pointer;
+}
+
+.btn-outline-gold:hover {
+  background: var(--primary);
+  color: white;
+  transform: scale(1.02);
+}
+
+.btn-secondary {
+  background: var(--gradient-secondary);
+  color: white;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: 'Tajawal', sans-serif;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(37, 64, 51, 0.3);
 }
