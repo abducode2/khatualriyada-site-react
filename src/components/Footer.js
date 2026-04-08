@@ -220,7 +220,7 @@ const Footer = () => {
               </li>
               <li>
                 <i className="fas fa-envelope"></i>
-                <span>info@namer-realestate.com</span>
+                <span>info@khatualriyada.sa</span>
               </li>
               <li>
                 <i className="fas fa-clock"></i>
